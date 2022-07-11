@@ -1,0 +1,66 @@
+
+article, section,
+header, footer, 
+aside, nav {
+    display: block;
+}
+
+body, .page {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: block;
+}
+
+.page-head,
+.page-footer {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.page-content {
+    display: block;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.page-sidebar {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+@media screen and (min-width: 1024px) {
+    .page { 
+        margin: 2% auto;
+        max-width: 950px; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page { margin: 0; }
+    .page-content,
+    .page-sidebar {
+        clear: both;
+        width: 100%;
+    }
+}
+
+@media print {
+    .page { margin: 0; }
+    .page-content {
+        width: 98%;
+        clear: both;
+    }
+    .page-head,
+    .page-footer,
+    .page-sidebar {
+        display: none;
+        width: 100%;
+    }
+}

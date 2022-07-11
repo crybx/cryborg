@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  {% block headers %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {% if output_file == "index.html" %}
+      <meta name="description" content="The personal website of Cry.">
+    {% endif %}
+
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/base.css">
+    <link rel="shortcut icon" type="text/css" href="{{ SITEURL }}/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml"
+                          title="{{ SITENAME }} — Flux Atom"
+                          href="{{ SITEURL }}/{{ FEED }}" />
+    {% if FEED_RSS %}
+    <link rel ="alternate" type="application/rss+xml"
+                           title="{{ SITENAME }} — Flux RSS"
+                           href="{{ SITEURL }}/{{ FEED_RSS }}" />
+    {% endif %}
+    <!--[if lte IE 8]><script src="{{ SITEURL }}/theme/js/html5shiv.js"></script><![endif]-->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700|PT+Mono|Bitter:400,400italic|Rokkitt' rel='stylesheet' type='text/css'>
+
+    <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <link href="{{ SITEURL }}/theme/js/vendor/textillate/assets/animate.css" rel="stylesheet">
+
+  {% endblock headers %}
+  </head>
+  <body>
+    {% include "includes/header.html" %}
+
+    <div class="main-container">
+      <div class="main wrapper clearfix">
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </div>
+
+    {% include "includes/footer.html" %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <script src="{{ SITEURL }}/theme/js/vendor/textillate/jquery.textillate.js"></script>
+    <script src="{{ SITEURL }}/theme/js/vendor/textillate/assets/jquery.fittext.js"></script>
+    <script src="{{ SITEURL }}/theme/js/vendor/textillate/assets/jquery.lettering.js"></script>
+    <script src="{{ SITEURL }}/theme/js/main.js"></script>
+  </body>
+</html>

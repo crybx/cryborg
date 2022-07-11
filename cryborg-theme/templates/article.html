@@ -1,0 +1,59 @@
+{%- if article.lang %}{% set DEFAULT_LANG = article.lang %}{% endif -%}
+{% extends "base.html" %}
+
+{% block headers %}
+    {{ super() }}
+    <meta name="author"   content="{{ article.author }}" />
+    <meta name="keywords" content="{{ article.tags|join(', ') }}" />
+{% endblock %}
+
+{% block title %}{{ article.title }} — {{ super() }}{% endblock %}
+
+{%- block content %}
+     <article class="post content">
+      <header class="post-header">
+        <h1>
+          <a rel="bookmark"
+             href="{{ SITEURL }}/{{ article.url }}"
+             title="Permanent link to «{{ article.title|striptags }}»">
+             {{ article.title }}
+          </a>
+        </h1>
+        <time class="date"
+              datetime="{{ article.date.isoformat() }}"
+              pubdate="pubdate">
+            {{ article.locale_date }}
+        </time>
+      </header>
+      <div class="post-content">
+        {{ article.content }}
+      </div>
+      {% if article.prev_article or article.next_article %}
+        <br />
+        <hr />
+        <br>
+      {% endif %}
+      <ul>
+        {% if article.next_article %}
+            <li>
+                Next post:
+                <a href="{{ SITEURL }}/archive/{{ article.next_article}}">
+                    {{ article.next_article_title }}
+                </a>
+            </li>
+        {% endif %}
+        {% if article.prev_article %}
+            <li>
+                Previous post:
+                <a href="{{ SITEURL }}/archive/{{ article.prev_article}}">
+                    {{ article.prev_article_title }}
+                </a>
+            </li>
+        {% endif %}
+      </ul>
+
+      {% if DISQUS_SITENAME and article and article.comments != "none" %}
+        {% include "includes/disqus.html" %}
+      {% endif %}
+    </article>
+{% endblock content -%}

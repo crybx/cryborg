@@ -1,0 +1,17 @@
+<div class="header-container bg2">
+    <div class="bg-circuit"></div>
+    <header class="wrapper clearfix">
+        <div class="titles">
+            <a href="{{ SITEURL }}"><h1 class="title">cryborg</h1></a>
+            <a href="{{ SITEURL }}/about/"><h4 class="sub-title"><span class="carat">></span> whoami</h4></a>
+        </div>
+        <nav>
+            <ul>
+                <a href="{{ SITEURL }}"><li {% if output_file == "index.html" %}class="active"{% endif %}>home</li></a>
+                <a href="{{ SITEURL }}/about/"><li {% if output_file == "about/index.html" %}class="active"{% endif %}>about</li></a>
+                <a href="{{ SITEURL }}/archive/"><li {% if "archive/" in output_file  %}class="active"{% endif %}>archive</li></a>
+                <a href="{{ SITEURL }}/contact/"><li {% if output_file == "contact/index.html" %}class="active"{% endif %}>contact</li></a>
+            </ul>
+        </nav>
+    </header>
+</div>

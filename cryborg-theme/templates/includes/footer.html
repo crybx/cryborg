@@ -1,0 +1,21 @@
+<div class="footer-container bg2">
+  <footer class="wrapper">
+
+    <div class="links">
+      <strong>Latest Posts</strong>
+      <ul>
+        {% for article in articles[:3] %}
+          <a href="{{ SITEURL }}/archive/{{article.slug}}/"><li>{{article.locale_date}} {{article.title}}</li></a>
+        {% endfor %}
+        <a href="{{ SITEURL }}/archive/"><li>More posts</li></a>
+      </ul>
+    </div>
+
+    <div>Copyright © 2022 cryborg</div>
+    <br />
+    <img 
+      src="/images/cyberpunk-circle-small.png" 
+      alt="purple sci-fi girl" 
+      class="center profile-pic">
+  </footer>
+</div>

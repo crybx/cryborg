@@ -1,0 +1,4 @@
+*.pyc
+develop_server.sh
+cache/
+.idea

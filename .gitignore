@@ -2,3 +2,4 @@
 develop_server.sh
 cache/
 .idea
+.venv

@@ -6,6 +6,4 @@ The engine behind cryborg is basic, static HTML. [Pelican](http://blog.getpelica
 
 As for what this site is all about, cryborg is my personal website. In the past, I've shared a lot of my writing here.
 
-And who am I? I'm a person who, for the moment, doesn't know what they want to go by online or how they want to continue using this corner of web real estate. I've removed nearly all of the content I used to host here and am declaring this website to be on hiatus until further notice.
-
-If for some reason you'd like to contact me, see my [contact page](/contact/) for ways to get in touch.
+And who am I? I'm a person who, for the moment, doesn't know what they want to go by online or how they want to continue using this corner of the web. I've removed nearly all the content I used to host here and am declaring this website to be on hiatus until further notice.

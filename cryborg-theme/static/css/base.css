@@ -41,6 +41,14 @@ html, body {
     background-color: #fafaf9;
 }
 
+/* Sticky footer: fill the viewport so the footer sits at the bottom
+   on short pages, while still flowing normally when content is tall. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 ::selection {
   background: #c49cff; /* WebKit/Blink Browsers */
 }
@@ -132,6 +140,7 @@ a:hover {
     }
 
 .main-container {
+    flex: 1 0 auto;
     padding: 30px 0;
     border-top: 1px solid #9b9b90;
     font-weight: normal;

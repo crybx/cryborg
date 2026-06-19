@@ -19,10 +19,11 @@ PAGE_URL = '{slug}/'
 PATH = 'content'
 SITENAME = 'cryborg'
 SITEURL = 'http://cryb.org'
-STATIC_PATHS = ['images', 'robots.txt', 'favicon.ico']
+STATIC_PATHS = ['images', 'robots.txt', 'favicon.ico', 'CNAME']
 EXTRA_PATH_METADATA = {
     'robots.txt': {'path': 'robots.txt'},
     'favicon.ico' : {'path': 'favicon.ico'},
+    'CNAME': {'path': 'CNAME'},
     }
 TIMEZONE = 'America/New_York'
 USE_FOLDER_AS_CATEGORY = True
